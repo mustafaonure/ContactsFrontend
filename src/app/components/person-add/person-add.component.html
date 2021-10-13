@@ -1,0 +1,43 @@
+<form class="example-form">
+    <h3>
+        <mat-icon>account_box</mat-icon>{{data?"Kişi Güncelle" : "Kişi Ekle"}}</h3>
+        <div [formGroup]="personForm">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Telefon</mat-label>
+            <input matInput placeholder="XXX-XXX-XX-XX" type="tel" value="" formControlName="phoneNumber" required onkeydown="javascript:return event.keyCode === 8 ||
+             event.keyCode===46 ? true:!isNaN(Number(event.key))">
+             
+          </mat-form-field>
+        
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Ad</mat-label>
+              <input matInput formControlName="name" required>
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Soyad</mat-label>
+              <input matInput formControlName="surname" required>
+            </mat-form-field></td>
+          </tr></table>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Mail</mat-label>
+              <textarea matInput placeholder="abc@mail.com" formControlName="mail"></textarea>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Web Sitesi</mat-label>
+              <textarea matInput placeholder="www.abc.com" formControlName="webSite"></textarea>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Açıklama</mat-label>
+              <textarea matInput formControlName="title"></textarea>
+              <textarea matInput></textarea> 
+            </mat-form-field> 
+          </div>
+    <div class="example-button-row">
+        <button [disabled]="personForm.invalid" (click)="data?updatePerson():addPerson()" mat-stroked-button  color="accent">{{data?"Güncelle":"Kaydet"}}</button>
+        <button mat-stroked-button color="warn" mat-dialog-close>Vazgeç</button> 
+      </div>
+    
+  </form>
+  

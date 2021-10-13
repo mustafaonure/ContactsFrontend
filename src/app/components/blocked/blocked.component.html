@@ -1,0 +1,28 @@
+<div class="text-center">
+<div id="spinner" *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<table  class="table table-hover" *ngIf ="dataLoaded==true" >
+    <thead>
+        <th></th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Numara</th>
+        <th><mat-icon>info</mat-icon>Diğer</th>
+       
+       
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of people ">
+            <td id="table-icon"><mat-icon id="table-icon">person</mat-icon></td>
+            <td>{{person.name}}</td>
+            <td>{{person.surname}}</td>
+            <td>{{person.phoneNumber}}</td>
+            <td>Mail:{{person.mail}}<br>WebSite:{{person.webSite}}<br>Açıklama:{{person.title}}</td>
+            <td><mat-icon (click)="updateBlocked(person)" value="Engelle" class="mat-icon">blocked</mat-icon></td>
+                 
+        </tr>
+    </tbody>
+</table>

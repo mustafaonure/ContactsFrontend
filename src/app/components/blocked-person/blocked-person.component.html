@@ -1,0 +1,11 @@
+<h1 *ngIf="data.blockedNumber;else elseBlock">Kişiyi engellenenlerden kaldırmak istediğinize emin misiniz?</h1>
+<ng-template #elseBlock> 
+   <h1>Kişiyi engellemek istediğinize emin misiniz?</h1>
+</ng-template>
+
+<br>
+<div class="example-button-row">
+    <button mat-stroked-button color="accent" mat-dialog-close>Vazgeç</button> 
+    <button (click)="updateBlocked()" mat-stroked-button class="delete" color="warn">{{data.blockedNumber?"Kaldır":"Engelle"}}</button>
+
+  </div>

@@ -1,0 +1,7 @@
+<h1>{{ data.favorites ? "Kişiyi favorilerden kaldırmak istediğinize emin misiniz?" :  "Kişiyi favorilere eklemek istediğinize emin misiniz?"}}</h1>
+<br>
+<div class="example-button-row">
+    <button mat-stroked-button color="accent" mat-dialog-close>Vazgeç</button> 
+    <button (click)="updateFavorite()" mat-stroked-button class="delete" color="primary">{{data.favorites?"Kaldır":"Ekle"}}</button>
+
+  </div>

@@ -1,0 +1,25 @@
+mat-icon{
+    color:black;
+}
+.navbar{
+    background-color:lightgray;
+}
+.navbar-brand{
+    color: black;
+    font-size: x-large;
+    margin-left: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav-item{
+    
+    font-size: large;
+    margin-left: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav-link{
+    color: black;
+}
+.nav-icon{
+    font-size: 50px;
+    margin-bottom: 25px;
+}

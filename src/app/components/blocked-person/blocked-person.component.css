@@ -1,0 +1,7 @@
+.example-button-row {
+    width: 100%;
+    display: inline-flex;
+  }
+  .delete{
+      margin-left: auto;
+  }
